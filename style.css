@@ -290,7 +290,7 @@ section#join button:hover {
 .x-link {
     position: fixed;
     bottom: 20px; /* Instagramと同じ高さ */
-    right: 40px; /* 画面右端からの距離 */
+    right: 80px; /* 画面右端からの距離 */
     z-index: 1000;
     background-color: #fff;
     border-radius: 50%;
