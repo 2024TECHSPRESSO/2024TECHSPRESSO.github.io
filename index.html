@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHSPRESSO COFFEE STAND</title>
     <link rel="stylesheet" href="style.css"> <!-- CSSを読み込み -->
+    <!-- メタデータ -->
+    <meta name="description" content="Discover the joy of coffee at TECHSPRESSO COFFEE STAND. Join us for events, workshops, and more!">
+    <meta name="keywords" content="Coffee, TECHSPRESSO, Coffee Stand, Workshops, Events">
+    <meta name="author" content="TECHSPRESSO Team">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="hero"> <!-- ヘッダー部分 -->
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#join">Join Us</a></li>
+                <li><a href="#about" aria-label="About Us section">About</a></li>
+                <li><a href="#events" aria-label="Our Events section">Events</a></li>
+                <li><a href="#join" aria-label="Join Us section">Join Us</a></li>
             </ul>
         </nav>
         <div class="hero-text">
@@ -40,9 +46,10 @@
     <section id="join"> <!-- Join Usセクション -->
         <h2>Join Us</h2>
         <p>We are always looking for new members! Contact us to join the fun.</p>
+        <button onclick="window.location.href='mailto:contact@techspressocoffeestand.com';">Contact Us</button>
     </section>
     <footer> <!-- フッター -->
-        <p>&copy; 2024 TECHSPRESSO Coffee Club</p>
+        <p>&copy; 2024 TECHSPRESSO COFFEE STAND</p>
     </footer>
 </body>
 </html>
