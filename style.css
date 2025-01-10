@@ -208,3 +208,30 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+/* インスタグラムリンクのスタイル */
+.instagram-link {
+    position: fixed; /* 常に画面に固定 */
+    bottom: 20px; /* 画面下部からの距離 */
+    right: 20px; /* 画面右端からの距離 */
+    z-index: 1000; /* 他の要素より前面に表示 */
+    background-color: #fff; /* 背景色 */
+    border-radius: 50%; /* 丸型にする */
+    width: 50px; /* アイコンのサイズ */
+    height: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 軽い影を追加 */
+    display: flex;
+    justify-content: center; /* アイコンを中央揃え */
+    align-items: center; /* アイコンを中央揃え */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.instagram-link img {
+    width: 60%; /* アイコン画像のサイズ調整 */
+    height: 60%;
+}
+
+.instagram-link:hover {
+    transform: scale(1.2); /* ホバー時に拡大 */
+    background-color: #f09433; /* インスタグラムのブランドカラー */
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* グラデーション */
+}
