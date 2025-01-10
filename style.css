@@ -115,6 +115,29 @@ header.hero p {
 .about-text p {
     font-size: 1.2rem; /* テキストサイズ */
 }
+/* アニメーション（フェードインとスライドイン） */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* 下から上にスライド */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 元の位置 */
+    }
+}
+
+/* 初期状態（アニメーション前の設定） */
+.about-text h2 {
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(20px); /* 初期位置を下に設定 */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* アニメーション */
+}
+
+/* アニメーションを開始するクラス */
+.about-text h2.animate {
+    animation: fadeInSlide 1s ease forwards; /* アニメーションを1秒間で実行 */
+}
 
 /* スマホ表示対応 */
 @media (max-width: 768px) {
