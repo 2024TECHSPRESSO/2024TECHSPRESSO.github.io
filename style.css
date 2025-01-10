@@ -5,20 +5,56 @@ body {
     padding: 0;
 }
 
-/* ヘッダー部分（Heroセクション） */
+/* Heroセクションのスタイル */
 header.hero {
-    background-image: url('techs pic/techspic2jpg.jpg'); /* 背景画像の設定 */
-    background-size: cover; /* 画像をコンテナ全体に拡大 */
-    background-position: center; /* 画像を中央に配置 */
-    height: 100vh; /* ビューポート全体の高さ */
-    display: flex; /* コンテンツを中央に配置 */
-    flex-direction: column; /* 縦方向に配置 */
-    justify-content: center; /* 縦方向の中央揃え */
-    align-items: center; /* 横方向の中央揃え */
-    color: black;
+    background-image: url('techs pic/techspic2jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 0 20px;
-    margin-bottom: 0;
+    color: white; /* テキストを白に設定 */
+}
+
+/* Hero内コンテンツ */
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out forwards; /* フェードインアニメーション */
+    opacity: 0; /* 初期状態を透明に */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out 1s forwards; /* 遅延フェードイン */
+    opacity: 0; /* 初期状態を透明に */
+}
+
+/* アイコン部分 */
+.hero-icon-container {
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-in-out forwards; /* フェードインアニメーション */
+    opacity: 0; /* 初期状態を透明に */
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header.hero h1 {
