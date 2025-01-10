@@ -1,43 +1,98 @@
+/* 全体の基本スタイル */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-h1 {
-    color: #2c3e50;
+/* ヘッダー部分（Heroセクション） */
+header.hero {
+    background-image: url('images/coffee.jpg'); /* 背景画像の設定 */
+    background-size: cover; /* 画像をコンテナ全体に拡大 */
+    background-position: center; /* 画像を中央に配置 */
+    height: 100vh; /* ビューポート全体の高さ */
+    display: flex; /* コンテンツを中央に配置 */
+    flex-direction: column; /* 縦方向に配置 */
+    justify-content: center; /* 縦方向の中央揃え */
+    align-items: center; /* 横方向の中央揃え */
+    color: white; /* テキストカラー */
     text-align: center;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-p {
-    text-align: center;
-    font-size: 18px;
+header.hero h1 {
+    font-size: 3rem; /* 大きな見出し */
+    margin: 0; /* 余白をなくす */
 }
+
+header.hero p {
+    font-size: 1.5rem; /* サブ見出し */
+    margin-top: 10px;
+}
+
+/* ナビゲーションバー */
 nav {
     background: rgba(0, 0, 0, 0.6); /* 半透明の背景 */
     position: sticky; /* スクロール時に上部に固定 */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* ナビゲーションを最前面に表示 */
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
+    list-style: none; /* 項目記号を非表示 */
+    display: flex; /* 横並びに配置 */
+    justify-content: center; /* 中央揃え */
     padding: 10px 0;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+    text-decoration: none; /* 下線を削除 */
     font-weight: bold;
-    transition: background 0.3s;
+    padding: 10px 20px;
+    transition: background 0.3s; /* ホバー時のスムーズなエフェクト */
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2); /* ホバー時のエフェクト */
+    background: rgba(255, 255, 255, 0.2); /* ホバー時の背景色 */
     border-radius: 5px;
+}
+
+/* セクションのデザイン */
+section {
+    padding: 80px 20px;
+    background: #f8f8f8; /* 明るい背景色 */
+    border-bottom: 1px solid #ddd;
+}
+
+section:nth-child(even) {
+    background: #fff; /* 偶数セクションの背景色 */
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px; /* テキストの最大幅 */
+    margin: 0 auto;
+    line-height: 1.6; /* 行間を広くする */
+}
+
+/* フッター */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
