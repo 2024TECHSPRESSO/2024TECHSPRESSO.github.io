@@ -71,5 +71,18 @@
     <a href="https://www.instagram.com/techspresso_coffee/" target="_blank" class="instagram-link" aria-label="Visit our Instagram">
         <img src="techs pic/Instagram_Glyph_Gradient.jpg.png" alt="Instagram Icon">
     </a>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const aboutHeading = document.querySelector(".about-text h2");
+
+        // スクロールイベントでアニメーションをトリガー
+        window.addEventListener("scroll", function () {
+            const rect = aboutHeading.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                aboutHeading.classList.add("animate");
+            }
+        });
+    });
+</script>
 </body>
 </html>
