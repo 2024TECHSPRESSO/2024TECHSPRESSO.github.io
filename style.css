@@ -1,6 +1,6 @@
 /* 全体の基本スタイル */
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Google Fontsを使用 */
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -15,56 +15,104 @@ header.hero {
     flex-direction: column; /* 縦方向に配置 */
     justify-content: center; /* 縦方向の中央揃え */
     align-items: center; /* 横方向の中央揃え */
-    color: black; /* テキストカラー */
+    color: black;
     text-align: center;
     padding: 0 20px;
-    margin: 0; /* ヘッダー全体のマージンをゼロに */
+    margin-bottom: 0;
 }
 
 header.hero h1 {
     font-size: 3rem; /* 大きな見出し */
-    margin: 0; /* 見出しの余白をゼロに */
+    margin: 0;
+    animation: fadeIn 2s ease-in-out forwards; /* フェードインアニメーション */
+    opacity: 0; /* 初期状態を透明に */
 }
 
 header.hero p {
-    font-size: 1.5rem; /* サブ見出し */
+    font-size: 1.5rem;
     margin-top: 10px;
+    animation: fadeIn 2s ease-in-out 1s forwards; /* 遅延フェードイン */
+    opacity: 0; /* 初期状態を透明に */
 }
 
-/* Aboutセクションのレイアウト */
-.about-container {
+/* ナビゲーションバー */
+nav {
+    background: rgba(0, 0, 0, 0.6); /* 半透明の背景 */
+    position: sticky; /* スクロール時に上部に固定 */
+    top: 0;
+    z-index: 1000; /* ナビゲーションを最前面に表示 */
+}
+
+nav ul {
+    list-style: none; /* 項目記号を非表示 */
     display: flex; /* 横並びに配置 */
-    align-items: center; /* 縦方向の中央揃え */
-    justify-content: space-between; /* 画像とテキストを適度に分ける */
-    gap: 20px; /* 画像とテキストの間のスペース */
-    max-width: 1200px; /* セクションの幅制限 */
-    margin: 0 auto; /* センター揃え */
-    padding: 0; /* 空白を完全に削除 */
+    justify-content: center; /* 中央揃え */
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* リンクの色を白に設定 */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px; /* 角丸デザイン */
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.8); /* ホバー時の背景色 */
+    color: black; /* ホバー時の文字色 */
+}
+
+/* Aboutセクション */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
 }
 
 .about-container img {
-    flex: 1; /* 画像の幅を自動調整 */
-    max-width: 300px; /* 画像の最大幅 */
-    height: auto; /* アスペクト比を保つ */
-    border-radius: 10px; /* 角を丸くする */
+    flex: 1;
+    max-width: 400px; /* 画像を少し大きく調整 */
+    height: auto;
+    margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
 }
 
 .about-text {
-    flex: 2; /* テキストの幅を自動調整 */
+    flex: 2;
     color: #333;
     line-height: 1.6;
-    margin: 0; /* テキストの余白を削除 */
 }
 
 .about-text h2 {
     font-size: 2rem;
-    margin-bottom: 10px; /* 必要最小限のスペース */
+    margin-bottom: 20px;
 }
 
 .about-text p {
     font-size: 1.2rem;
-    margin: 0;
+}
+
+/* アニメーション (フェードイン) */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 初期状態: 完全に透明 */
+        transform: translateY(20px); /* 下から上に移動 */
+    }
+    to {
+        opacity: 1; /* 最終状態: 不透明 */
+        transform: translateY(0); /* 元の位置に戻る */
+    }
 }
 
 /* Join Usセクション */
@@ -84,8 +132,8 @@ section#join p {
 }
 
 section#join button {
-    background-color: #333; /* ダークな背景色 */
-    color: white; /* ボタンテキスト色 */
+    background-color: #333;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -95,7 +143,7 @@ section#join button {
 }
 
 section#join button:hover {
-    background-color: #555; /* ホバー時の背景色 */
+    background-color: #555;
 }
 
 /* フッター */
@@ -110,99 +158,3 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
-/* フェードインアニメーション */
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* 初期状態: 完全に透明 */
-        transform: translateY(20px); /* 下から上に移動 */
-    }
-    to {
-        opacity: 1; /* 最終状態: 不透明 */
-        transform: translateY(0); /* 元の位置に戻る */
-    }
-}
-
-/* アニメーションの適用 (共通設定) */
-.hero-text h1,
-.hero-text p {
-    opacity: 0; /* 初期状態を透明に設定 */
-    animation-fill-mode: forwards; /* アニメーション終了後に状態を維持 */
-}
-
-/* デスクトップとスマホの共通アニメーション設定 */
-.hero-text h1 {
-    animation: fadeIn 2s ease-in-out; /* フェードインアニメーションを適用 */
-}
-
-.hero-text p {
-    animation: fadeIn 2s ease-in-out 1s; /* 1秒遅れてアニメーション開始 */
-}
-
-/* メディアクエリ内でも明示的に適用 (万全対策) */
-@media (max-width: 768px) {
-    .hero-text h1,
-    .hero-text p {
-        animation: fadeIn 2s ease-in-out; /* スマホでも同じアニメーションを適用 */
-    }
-}
-
-/* レスポンシブデザイン対応 (画面幅が768px以下の場合) */
-@media (max-width: 768px) {
-    /* Heroセクション (Welcomeの部分) */
-    .hero-text h1 {
-        font-size: 1.8rem; /* フォントサイズを縮小 */
-        text-align: center; /* 中央揃え */
-        margin: 0 10px; /* 左右の余白を調整 */
-    }
-
-    .hero-text p {
-        font-size: 1rem; /* サブ見出しのフォントサイズを縮小 */
-        text-align: center; /* 中央揃え */
-        margin: 10px 10px; /* 左右余白を調整 */
-    }
-
-    /* Aboutセクション */
-    .about-container {
-        flex-direction: column; /* 横並びを縦並びに変更 */
-        gap: 10px; /* 縦並びの間隔を調整 */
-        padding: 20px 10px; /* セクションの余白を調整 */
-    }
-
-    .about-container img {
-        max-width: 90%; /* 画像を画面幅に合わせる */
-        height: auto; /* アスペクト比を保持 */
-        margin: 0 auto; /* 画像を中央揃え */
-    }
-
-    .about-text {
-        text-align: center; /* テキストを中央揃え */
-        padding: 0 10px; /* テキストの左右余白を調整 */
-    }
-
-    /* Join Usセクション */
-    section#join {
-        padding: 30px 10px; /* 全体の余白を調整 */
-    }
-
-    section#join h2 {
-        font-size: 1.8rem; /* フォントサイズを縮小 */
-        margin-bottom: 15px;
-    }
-
-    section#join p {
-        font-size: 1rem; /* テキストのサイズを調整 */
-        margin-bottom: 15px;
-    }
-
-    section#join button {
-        font-size: 1rem; /* ボタンのフォントサイズを調整 */
-        padding: 10px 15px; /* ボタンの内側余白を調整 */
-    }
-
-    /* フッター */
-    footer {
-        padding: 15px 10px; /* フッターの余白を縮小 */
-        font-size: 0.8rem; /* フッターテキストのフォントサイズを縮小 */
-    }
-}
-
