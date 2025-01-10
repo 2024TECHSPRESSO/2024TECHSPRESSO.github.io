@@ -125,7 +125,56 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+/* Eventsセクション */
+.event-section {
+    position: relative; /* 子要素の位置を基準に調整 */
+    height: 100vh; /* ヘッダーと同じ高さ */
+    background-image: url('techs pic/texp3.jpg');
+    background-size: cover; /* 背景画像を全体に拡大 */
+    background-position: center; /* 背景画像を中央に配置 */
+    color: white; /* テキストを白に設定 */
+}
 
+.event-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* 半透明の黒背景で文字を読みやすく */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-content {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* 半透明の白背景で内容を際立たせる */
+    color: black; /* テキストを黒に変更 */
+    border-radius: 10px; /* 角丸デザイン */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 軽い影を追加 */
+}
+
+.event-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.event-content ul {
+    list-style: none; /* 項目記号を削除 */
+    padding: 0;
+}
+
+.event-content ul li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.event-content ul li strong {
+    font-weight: bold;
+}
 /* Instagramリンク */
 .instagram-link {
     position: fixed;
