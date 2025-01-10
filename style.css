@@ -92,21 +92,6 @@ header.hero p {
     max-width: 100%; /* 最大サイズを制限 */
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* スマホでは縦に配置 */
-        text-align: center; /* テキストを中央揃え */
-    }
-
-    .about-container img {
-        max-width: 90%; /* 画面幅の90%に制限 */
-    }
-
-    .about-text {
-        margin-top: 20px; /* テキストに余白を追加 */
-    }
-}
 
 /* アニメーション */
 @keyframes fadeIn {
