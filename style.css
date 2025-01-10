@@ -5,7 +5,41 @@ body {
     padding: 0;
 }
 
-/* Heroセクションのスタイル */
+/* ナビゲーションバー */
+nav {
+    background: rgba(0, 0, 0, 0.6); /* 半透明の背景 */
+    position: sticky; /* スクロール時に上部に固定 */
+    top: 0;
+    z-index: 1000; /* 他の要素より前面に表示 */
+}
+
+nav ul {
+    list-style: none; /* 項目記号を非表示 */
+    display: flex; /* 横並びに配置 */
+    justify-content: center; /* 中央揃え */
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* 各リスト項目の間隔を設定 */
+}
+
+nav ul li a {
+    color: white; /* リンクの色を白に設定 */
+    text-decoration: none; /* 下線を削除 */
+    font-weight: bold;
+    padding: 8px 15px; /* 内側の余白 */
+    border-radius: 5px; /* 角丸デザイン */
+    transition: background 0.3s, color 0.3s; /* スムーズなエフェクト */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.8); /* ホバー時の背景色 */
+    color: black; /* ホバー時の文字色 */
+}
+
+/* Heroセクション */
 header.hero {
     background-image: url('techs pic/techspic2jpg.jpg');
     background-size: cover;
@@ -21,46 +55,10 @@ header.hero {
 }
 
 /* Hero内コンテンツ */
-.hero-content h1 {
+header.hero h1 {
     font-size: 3rem;
     margin: 0;
-    animation: fadeIn 2s ease-in-out forwards; /* フェードインアニメーション */
-    opacity: 0; /* 初期状態を透明に */
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    animation: fadeIn 2s ease-in-out 1s forwards; /* 遅延フェードイン */
-    opacity: 0; /* 初期状態を透明に */
-}
-
-/* アイコン部分 */
-.hero-icon-container {
-    margin-top: 20px;
-    animation: fadeIn 2.5s ease-in-out forwards; /* フェードインアニメーション */
-    opacity: 0; /* 初期状態を透明に */
-}
-
-.icon {
-    width: 200px;
-    height: 200px;
-}
-
-/* アニメーション */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-header.hero h1 {
-    font-size: 3rem; /* 大きな見出し */
-    margin: 0;
-    animation: fadeIn 2s ease-in-out forwards; /* フェードインアニメーション */
+    animation: fadeIn 2s ease-in-out forwards; /* アニメーション */
     opacity: 0; /* 初期状態を透明に */
 }
 
@@ -71,38 +69,16 @@ header.hero p {
     opacity: 0; /* 初期状態を透明に */
 }
 
-/* ナビゲーションバー */
-nav {
-    background: rgba(0, 0, 0, 0.6); /* 半透明の背景 */
-    position: sticky; /* スクロール時に上部に固定 */
-    top: 0;
-    z-index: 1000; /* ナビゲーションを最前面に表示 */
+/* アイコン部分 */
+.hero-icon-container {
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-in-out forwards;
+    opacity: 0;
 }
 
-nav ul {
-    list-style: none; /* 項目記号を非表示 */
-    display: flex; /* 横並びに配置 */
-    justify-content: center; /* 中央揃え */
-    padding: 10px 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white; /* リンクの色を白に設定 */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px; /* 角丸デザイン */
-    transition: background 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.8); /* ホバー時の背景色 */
-    color: black; /* ホバー時の文字色 */
+.icon {
+    width: 100px;
+    height: 100px;
 }
 
 /* Aboutセクション */
@@ -118,10 +94,10 @@ nav ul li a:hover {
 
 .about-container img {
     flex: 1;
-    max-width: 400px; /* 画像を少し大きく調整 */
+    max-width: 400px;
     height: auto;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -139,97 +115,14 @@ nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-/* アニメーション (フェードイン) */
+/* アニメーション */
 @keyframes fadeIn {
     from {
-        opacity: 0; /* 初期状態: 完全に透明 */
-        transform: translateY(20px); /* 下から上に移動 */
+        opacity: 0;
     }
     to {
-        opacity: 1; /* 最終状態: 不透明 */
-        transform: translateY(0); /* 元の位置に戻る */
+        opacity: 1;
     }
-}
-/* Eventsセクション */
-.event-section {
-    position: relative; /* 子要素の位置を基準に調整 */
-    height: 100vh; /* ヘッダーと同じ高さ */
-    background-image: url('techs pic/texp3.jpg');
-    background-size: cover; /* 背景画像を全体に拡大 */
-    background-position: center; /* 背景画像を中央に配置 */
-    color: white; /* テキストを白に設定 */
-}
-
-.event-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* 半透明の黒背景で文字を読みやすく */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.event-content {
-    max-width: 800px;
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* 半透明の白背景で内容を際立たせる */
-    color: black; /* テキストを黒に変更 */
-    border-radius: 10px; /* 角丸デザイン */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 軽い影を追加 */
-}
-
-.event-content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.event-content ul {
-    list-style: none; /* 項目記号を削除 */
-    padding: 0;
-}
-
-.event-content ul li {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.event-content ul li strong {
-    font-weight: bold;
-}
-
-/* Join Usセクション */
-section#join {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-section#join h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-section#join p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-section#join button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-section#join button:hover {
-    background-color: #555;
 }
 
 /* フッター */
@@ -240,34 +133,29 @@ footer {
     padding: 20px 0;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-/* インスタグラムリンクのスタイル */
+/* Instagramリンク */
 .instagram-link {
-    position: fixed; /* 常に画面に固定 */
-    bottom: 20px; /* 画面下部からの距離 */
-    right: 20px; /* 画面右端からの距離 */
-    z-index: 1000; /* 他の要素より前面に表示 */
-    background-color: #fff; /* 背景色 */
-    border-radius: 50%; /* 丸型にする */
-    width: 50px; /* アイコンのサイズ */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
     height: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 軽い影を追加 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center; /* アイコンを中央揃え */
-    align-items: center; /* アイコンを中央揃え */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* ホバー時のアニメーション */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .instagram-link img {
-    width: 60%; /* アイコン画像のサイズ調整 */
+    width: 60%;
     height: 60%;
 }
 
 .instagram-link:hover {
-    transform: scale(1.2); /* ホバー時に拡大 */
-    background-color: #f09433; /* インスタグラムのブランドカラー */
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* グラデーション */
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
