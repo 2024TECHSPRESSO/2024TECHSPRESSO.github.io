@@ -175,7 +175,7 @@ footer {
     max-width: 800px;
     text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* 半透明の白背景で内容を際立たせる */
+    background: rgba(255, 255, 255, 0.5); /* 半透明の白背景で内容を際立たせる */
     color: black; /* テキストを黒に変更 */
     border-radius: 10px; /* 角丸デザイン */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 軽い影を追加 */
