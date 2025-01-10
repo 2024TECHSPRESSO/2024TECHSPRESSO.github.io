@@ -122,17 +122,30 @@ footer p {
     }
 }
 
-.hero-text h1 {
-    animation: fadeIn 2s ease-in-out; /* フェードインアニメーションを適用 */
+/* アニメーションの適用 (共通設定) */
+.hero-text h1,
+.hero-text p {
     opacity: 0; /* 初期状態を透明に設定 */
     animation-fill-mode: forwards; /* アニメーション終了後に状態を維持 */
 }
 
+/* デスクトップとスマホの共通アニメーション設定 */
+.hero-text h1 {
+    animation: fadeIn 2s ease-in-out; /* フェードインアニメーションを適用 */
+}
+
 .hero-text p {
     animation: fadeIn 2s ease-in-out 1s; /* 1秒遅れてアニメーション開始 */
-    opacity: 0; /* 初期状態を透明に設定 */
-    animation-fill-mode: forwards; /* アニメーション終了後に状態を維持 */
 }
+
+/* メディアクエリ内でも明示的に適用 (万全対策) */
+@media (max-width: 768px) {
+    .hero-text h1,
+    .hero-text p {
+        animation: fadeIn 2s ease-in-out; /* スマホでも同じアニメーションを適用 */
+    }
+}
+
 /* レスポンシブデザイン対応 (画面幅が768px以下の場合) */
 @media (max-width: 768px) {
     /* Heroセクション (Welcomeの部分) */
