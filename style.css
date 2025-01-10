@@ -7,6 +7,7 @@ body {
 
 /* ヘッダー部分（Heroセクション） */
 header.hero {
+    color: black; /* すべてのテキストを黒に変更 */
     background-image: url('techs pic/TECHSLOGO.jpg'); /* 背景画像の設定 */
     background-size: cover; /* 画像をコンテナ全体に拡大 */
     background-position: center; /* 画像を中央に配置 */
