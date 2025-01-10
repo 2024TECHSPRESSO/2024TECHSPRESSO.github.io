@@ -310,4 +310,4 @@ section#join button:hover {
 
 .x-link:hover {
     transform: scale(1.2); /* ホバー時に拡大 */
-    background: linear-gradient(45deg, #1DA1F2, #1A91DA, #1776B6); /* X（Twitter）のブランドカラー */
+    background: linear-gradient(45deg, #0F1419, #0F1419, #0F1419); /* X（Twitter）のブランドカラー */
