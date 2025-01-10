@@ -16,7 +16,7 @@ header.hero {
     flex-direction: column; /* 縦方向に配置 */
     justify-content: center; /* 縦方向の中央揃え */
     align-items: center; /* 横方向の中央揃え */
-    color: white; /* テキストカラー */
+    color: black; /* テキストカラー */
     text-align: center;
     padding: 0 20px;
 }
