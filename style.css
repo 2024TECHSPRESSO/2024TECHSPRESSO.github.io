@@ -1,13 +1,12 @@
 /* 全体の基本スタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Google Fontsを使用 */
     margin: 0;
     padding: 0;
 }
 
 /* ヘッダー部分（Heroセクション） */
 header.hero {
-    color: black; /* すべてのテキストを黒に変更 */
     background-image: url('techs pic/techspic2jpg.jpg'); /* 背景画像の設定 */
     background-size: cover; /* 画像をコンテナ全体に拡大 */
     background-position: center; /* 画像を中央に配置 */
@@ -48,7 +47,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: white; /* リンクの色を白に設定 */
     text-decoration: none; /* 下線を削除 */
     font-weight: bold;
     padding: 10px 20px;
@@ -60,29 +59,69 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* セクションのデザイン */
-section {
-    padding: 80px 20px;
-    background: #f8f8f8; /* 明るい背景色 */
-    border-bottom: 1px solid #ddd;
+/* Aboutセクションのレイアウト */
+.about-container {
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: space-between; /* 画像とテキストを適度に分ける */
+    gap: 20px; /* 画像とテキストの間のスペース */
+    max-width: 1200px; /* セクションの幅制限 */
+    margin: 0 auto; /* センター揃え */
+    padding: 40px 20px;
 }
 
-section:nth-child(even) {
-    background: #fff; /* 偶数セクションの背景色 */
+.about-container img {
+    flex: 1; /* 画像の幅を自動調整 */
+    max-width: 400px; /* 画像の最大幅 */
+    height: auto; /* アスペクト比を保つ */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
 }
 
-section h2 {
-    font-size: 2rem;
+.about-text {
+    flex: 2; /* テキストの幅を自動調整 */
     color: #333;
+    line-height: 1.6;
+}
+
+.about-text h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-section p {
+.about-text p {
     font-size: 1.2rem;
-    color: #666;
-    max-width: 800px; /* テキストの最大幅 */
-    margin: 0 auto;
-    line-height: 1.6; /* 行間を広くする */
+}
+
+/* Join Usセクション */
+section#join {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+section#join h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section#join p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+section#join button {
+    background-color: #333; /* ダークな背景色 */
+    color: white; /* ボタンテキスト色 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+section#join button:hover {
+    background-color: #555; /* ホバー時の背景色 */
 }
 
 /* フッター */
