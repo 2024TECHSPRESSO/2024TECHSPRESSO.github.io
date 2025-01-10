@@ -110,3 +110,27 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+/* フェードインアニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 初期状態: 完全に透明 */
+        transform: translateY(20px); /* 下から上に移動 */
+    }
+    to {
+        opacity: 1; /* 最終状態: 不透明 */
+        transform: translateY(0); /* 元の位置に戻る */
+    }
+}
+
+.hero-text h1 {
+    animation: fadeIn 2s ease-in-out; /* フェードインアニメーションを適用 */
+    opacity: 0; /* 初期状態を透明に設定 */
+    animation-fill-mode: forwards; /* アニメーション終了後に状態を維持 */
+}
+
+.hero-text p {
+    animation: fadeIn 2s ease-in-out 1s; /* 1秒遅れてアニメーション開始 */
+    opacity: 0; /* 初期状態を透明に設定 */
+    animation-fill-mode: forwards; /* アニメーション終了後に状態を維持 */
+}
+
