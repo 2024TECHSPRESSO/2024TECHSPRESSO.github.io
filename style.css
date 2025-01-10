@@ -108,6 +108,8 @@ header.hero p {
 .about-text h2 {
     font-size: 2rem; /* 見出しサイズ */
     margin-bottom: 20px; /* 見出し下の余白 */
+    animation: fadeIn 2s ease-in-out forwards; /* アニメーション */
+    opacity: 0; /* 初期状態を透明に */
 }
 
 .about-text p {
