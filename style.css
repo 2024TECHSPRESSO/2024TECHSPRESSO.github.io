@@ -286,3 +286,28 @@ section#join button:hover {
     transform: scale(1.2);
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
+/* X（旧Twitter）リンク */
+.x-link {
+    position: fixed;
+    bottom: 20px; /* Instagramと同じ高さ */
+    right: 20px; /* 画面右端からの距離 */
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.x-link img {
+    width: 60%;
+    height: 60%;
+}
+
+.x-link:hover {
+    transform: scale(1.2); /* ホバー時に拡大 */
+    background: linear-gradient(45deg, #1DA1F2, #1A91DA, #1776B6); /* X（Twitter）のブランドカラー */
