@@ -140,23 +140,21 @@ header.hero p {
 }
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* 子要素を縦に並べる */
+        flex-direction: column; /* 画像とテキストを縦に並べる */
         text-align: center; /* テキストを中央揃え */
     }
 
     .about-container img {
-        max-width: 90%; /* 画像の横幅を画面幅の90%に調整 */
-        height: auto; /* アスペクト比を保持して高さを自動調整 */
-        margin: 0 auto 20px auto; /* 画像を中央揃えし、下に余白を追加 */
-        display: block; /* 余計な隙間を防ぐ */
+        max-width: 90%; /* 横幅を画面幅の90%に調整 */
+        height: auto; /* アスペクト比を保持 */
+        margin: 0 auto 20px auto; /* 中央揃えし、下に余白を追加 */
+        display: block; /* 不要な隙間を防ぐ */
     }
 
     .about-text {
-        margin-top: 0; /* 上の余白を削除 */
         padding: 0 10px; /* テキストに左右の余白を追加 */
     }
 }
-
 
 
 /* アニメーション */
