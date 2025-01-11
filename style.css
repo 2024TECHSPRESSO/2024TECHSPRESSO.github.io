@@ -146,7 +146,7 @@ header.hero p {
     }
 
     .about-container img {
-        max-width: 100%; /* 横幅を画面幅の100%に調整 */
+        max-width: auto; /* 横幅を画面幅の100%に調整 */
         height: auto; /* アスペクト比を保持して高さを自動調整 */
         margin: 0 auto; /* 画像を中央揃え */
         display: block; /* 余分な隙間を防ぐための設定 */
