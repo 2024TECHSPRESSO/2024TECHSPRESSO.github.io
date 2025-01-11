@@ -86,21 +86,21 @@ header.hero p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px; /* 画像とテキストの間に余白 */
+    gap: 20px; /* 画像とテキストの間の余白 */
     max-width: 1200px;
     margin: 0 auto; /* セクション全体を中央揃え */
-    padding: 20px; /* 内側の余白 */
+    padding: 20px; /* セクションの内側の余白 */
 }
 
 .about-container img {
-    flex: 1;
-    max-width: 50%; /* 横幅を50%に縮小 */
+    flex: 1; /* PCで画像が左側の半分を占める */
+    max-width: 100%; /* 親要素の幅に収まる */
     height: auto; /* アスペクト比を維持 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
 }
 
 .about-text {
-    flex: 1;
+    flex: 1; /* PCでテキストが右側の半分を占める */
     color: #333; /* テキスト色 */
     line-height: 1.6; /* 行間 */
 }
@@ -108,13 +108,12 @@ header.hero p {
 .about-text h2 {
     font-size: 2rem; /* 見出しサイズ */
     margin-bottom: 20px; /* 見出し下の余白 */
-    animation: fadeIn 2s ease-in-out forwards; /* アニメーション */
-    opacity: 0; /* 初期状態を透明に */
 }
 
 .about-text p {
     font-size: 1.2rem; /* テキストサイズ */
 }
+
 /* アニメーション（フェードインとスライドイン） */
 @keyframes fadeInSlide {
     from {
