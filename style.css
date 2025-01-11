@@ -138,24 +138,25 @@ header.hero p {
 .about-text h2.animate {
     animation: fadeInSlide 1s ease forwards; /* アニメーションを1秒間で実行 */
 }
-
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* 縦に並べる */
-        text-align: center; /* 中央揃え */
+        flex-direction: column; /* 子要素を縦に並べる */
+        text-align: center; /* テキストを中央揃え */
     }
 
     .about-container img {
-        max-width: auto; /* 横幅を画面幅の100%に調整 */
+        max-width: 90%; /* 画像の横幅を画面幅の90%に調整 */
         height: auto; /* アスペクト比を保持して高さを自動調整 */
-        margin: 0 auto; /* 画像を中央揃え */
-        display: block; /* 余分な隙間を防ぐための設定 */
+        margin: 0 auto 20px auto; /* 画像を中央揃えし、下に余白を追加 */
+        display: block; /* 余計な隙間を防ぐ */
     }
 
     .about-text {
-        margin-top: 20px; /* テキストに上余白を追加 */
+        margin-top: 0; /* 上の余白を削除 */
+        padding: 0 10px; /* テキストに左右の余白を追加 */
     }
 }
+
 
 
 /* アニメーション */
