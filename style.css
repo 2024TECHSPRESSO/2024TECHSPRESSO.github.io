@@ -177,7 +177,7 @@ footer {
 .event-section {
     position: relative; /* 子要素の位置を基準に調整 */
     height: 100vh; /* ヘッダーと同じ高さ */
-    background-image: url('techs pic/texp3.jpg');
+    background-image: url('techs pic/texp2jpg');
     background-size: cover; /* 背景画像を全体に拡大 */
     background-position: center; /* 背景画像を中央に配置 */
     color: white; /* テキストを白に設定 */
