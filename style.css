@@ -82,6 +82,7 @@ header.hero p {
 }
 
 /* Aboutセクション */
+
 .about-container {
     display: flex;
     align-items: center;
@@ -90,17 +91,13 @@ header.hero p {
     max-width: 1200px;
     margin: 0 auto; /* セクション全体を中央揃え */
     padding: 20px; /* セクションの内側の余白 */
-    flex-wrap: wrap; /* 子要素が幅に収まらない場合に折り返し */
 }
 
 .about-container img {
     flex: 1; /* PCで画像が左側の半分を占める */
-    max-width: 50%; /* 親要素の幅の50%に制限 */
-    height: auto; /* 縦横比を維持 */
-    aspect-ratio: auto; /* モダンブラウザでの比率維持 */
+    max-width: 50%; /* 親要素の幅に収まる */
+    height: auto; /* アスペクト比を維持 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
-    margin: 0 auto; /* 画像を中央揃え */
-    display: block; /* 不要な隙間を防ぐ */
 }
 
 .about-text {
@@ -141,18 +138,16 @@ header.hero p {
 .about-text h2.animate {
     animation: fadeInSlide 1s ease forwards; /* アニメーションを1秒間で実行 */
 }
-
 /* スマホ対応 */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column; /* 子要素を縦に並べる */
         text-align: center; /* テキストを中央揃え */
-        gap: 20px; /* セクション間の余白を適切に設定 */
     }
 
     .about-container img {
-        max-width: 90%; /* モバイルでは横幅を制限 */
-        height: auto; /* 縦横比を維持 */
+        max-width: 100%; /* 画像の横幅を制限しない */
+        height: auto; /* アスペクト比を維持 */
         margin: 0 auto 20px; /* 画像を中央揃えし、下に余白を追加 */
         display: block; /* 不要な隙間を防ぐ */
     }
@@ -162,7 +157,6 @@ header.hero p {
         padding: 0 10px; /* テキストに左右の余白を追加 */
     }
 }
-
 /* アニメーション */
 @keyframes fadeIn {
     from {
