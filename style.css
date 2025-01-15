@@ -139,24 +139,7 @@ header.hero p {
     animation: fadeInSlide 1s ease forwards; /* アニメーションを1秒間で実行 */
 }
 /* スマホ対応 */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* 子要素を縦に並べる */
-        text-align: center; /* テキストを中央揃え */
-    }
 
-    .about-container img {
-        max-width: 100%; /* 画像の横幅を制限しない */
-        height: auto; /* アスペクト比を維持 */
-        margin: 0 auto 20px; /* 画像を中央揃えし、下に余白を追加 */
-        display: block; /* 不要な隙間を防ぐ */
-    }
-
-    .about-text {
-        margin-top: 0; /* 上の余白を削除 */
-        padding: 0 10px; /* テキストに左右の余白を追加 */
-    }
-}
 /* アニメーション */
 @keyframes fadeIn {
     from {
