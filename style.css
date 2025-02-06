@@ -157,6 +157,27 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* 画像とテキストを縦並びに */
+        text-align: center; /* テキストを中央寄せ */
+        padding: 40px 20px; /* 余白を調整 */
+    }
+
+    .about-container img {
+        max-width: 80%; /* スマホでは画像を小さめに */
+        margin-bottom: 20px; /* 画像とテキストの間に余白を追加 */
+    }
+
+    .about-text {
+        font-size: 1rem; /* スマホ用にフォントサイズを縮小 */
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem; /* 見出しサイズを調整 */
+    }
+}
+
 /* Eventsセクション */
 .event-section {
     position: relative; /* 子要素の位置を基準に調整 */
