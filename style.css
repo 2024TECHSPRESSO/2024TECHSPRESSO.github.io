@@ -165,12 +165,39 @@ footer {
         padding: 40px 20px !important; /* 余白を調整 */
     }
 
-    .about-container img {
-        max-width: 85% !important; /* 画像サイズを調整 */
-        height: auto !important; /* 縦長を防ぎ、アスペクト比を維持 */
-        margin-bottom: 20px !important; /* 画像とテキストの間に余白を追加 */
-        object-fit: contain !important; /* 画像の見え方を適正化 */
+@media (max-width: 768px) {
+    /* About Us セクション全体 */
+    .about-container {
+        flex-direction: column !important; /* 画像を上、テキストを下に */
+        text-align: center !important; /* テキストを中央揃え */
+        padding: 40px 20px !important; /* 余白を調整 */
     }
+
+    /* 画像の修正 */
+    .about-container img {
+        flex: none !important;          /* flexの影響を解除 */
+        display: block;                 /* インライン要素の隙間をなくす */
+        width: 100% !important;          /* コンテナ内での横幅を100%に */
+        max-width: 85% !important;       /* 最大横幅は85%に制限 */
+        height: auto !important;         /* アスペクト比を維持 */
+        margin-bottom: 20px !important;  /* 画像とテキストの間に余白を追加 */
+        object-fit: contain !important;  /* 画像の見え方を適正化 */
+    }
+
+    /* テキスト部分 */
+    .about-text {
+        text-align: center !important; /* テキストを中央揃え */
+        font-size: 1.1rem !important;    /* フォントサイズを微調整 */
+        line-height: 1.8 !important;     /* 行間を広げて読みやすく */
+        padding: 0 10px !important;      /* 画面端にくっつかないよう余白を確保 */
+    }
+
+    .about-text h2 {
+        font-size: 1.6rem !important;    /* 見出しサイズを調整 */
+        margin-bottom: 10px !important;  /* 見出し下の余白を調整 */
+    }
+}
+
 
     .about-text {
         text-align: center !important; /* テキストを中央揃え */
