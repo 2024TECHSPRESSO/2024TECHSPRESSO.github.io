@@ -1,3 +1,4 @@
+
 /* 全体の基本スタイル */
 body {
     font-family: 'Roboto', Arial, sans-serif;
@@ -87,6 +88,7 @@ header.hero p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px; /* 画像とテキストの間の余白 */
     max-width: 1200px;
     margin: 0 auto; /* セクション全体を中央揃え */
     padding: 20px; /* セクションの内側の余白 */
