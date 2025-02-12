@@ -162,11 +162,14 @@ footer {
 @media (max-width: 768px) {
     /* About Us セクション全体 */
     .about-container {
+        display: block;
         flex-direction: column !important; /* 画像を上、テキストを下に */
         text-align: center !important; /* テキストを中央揃え */
-        gap: initial;
+        gap: none;
         padding: 40px 20px !important; /* 余白を調整 */
     }
+
+
 
     /* 画像の修正 */
     .about-container img {
