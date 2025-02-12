@@ -164,6 +164,7 @@ footer {
     .about-container {
         flex-direction: column !important; /* 画像を上、テキストを下に */
         text-align: center !important; /* テキストを中央揃え */
+        gap: initial;
         padding: 40px 20px !important; /* 余白を調整 */
     }
 
