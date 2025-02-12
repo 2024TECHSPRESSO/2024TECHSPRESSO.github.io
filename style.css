@@ -173,7 +173,7 @@ footer {
         flex: none !important;          /* flexの影響を解除 */
         display: block;                 /* インライン要素の隙間をなくす */
         width: 100% !important;          /* コンテナ内での横幅を100%に */
-        max-width: 85% !important;       /* 最大横幅は85%に制限 */
+        /*max-width: 85% !important;       /* 最大横幅は85%に制限 */
         height: auto !important;         /* アスペクト比を維持 */
         object-fit: contain !important;  /* 画像の見え方を適正化 */
     }
