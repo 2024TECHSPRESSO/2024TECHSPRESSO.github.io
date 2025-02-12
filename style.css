@@ -158,13 +158,6 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-@media (max-width: 768px) {
-    /* About Us セクション */
-    .about-container {
-        flex-direction: column !important; /* 画像を上、テキストを下に */
-        text-align: center !important; /* テキストを中央揃え */
-        padding: 40px 20px !important; /* 余白を調整 */
-    }
 
 @media (max-width: 768px) {
     /* About Us セクション全体 */
@@ -197,21 +190,6 @@ footer {
         margin-bottom: 10px !important;  /* 見出し下の余白を調整 */
     }
 }
-
-
-    .about-text {
-        text-align: center !important; /* テキストを中央揃え */
-        font-size: 1.1rem !important; /* フォントサイズを微調整 */
-        line-height: 1.8 !important; /* 行間を広げて読みやすく */
-        padding: 0 10px !important; /* 画面端にくっつかないよう余白を確保 */
-    }
-
-    .about-text h2 {
-        font-size: 1.6rem !important; /* 見出しサイズを少し調整 */
-        margin-bottom: 10px !important; /* 見出し下の余白を追加 */
-    }
-}
-
 
 /* Eventsセクション */
 .event-section {
